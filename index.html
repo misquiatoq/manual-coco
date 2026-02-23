@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coco Amigurumi — Manual Restaurado y Traducido</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+ *{ box-sizing:border-box; margin:0; padding:0; }
+ body{
+   font-family:'Poppins',system-ui,sans-serif;
+   background:#faf7f2;
+   color:#222;
+   line-height:1.7;
+ }
+ .wrap{
+   max-width:850px;
+   margin:0 auto;
+   padding:1.5rem 1.2rem 4rem;
+ }
+ h1,h2,h3{
+   font-family:'Caveat',cursive;
+   color:#254f9a;
+   line-height:1.2;
+ }
+ h1{
+   font-size:clamp(2rem,6vw,3.2rem);
+   text-align:center;
+   margin:2rem 0 0.5rem;
+ }
+ .subtitle{
+   text-align:center;
+   font-size:.95rem;
+   color:#888;
+   margin-bottom:2.5rem;
+ }
+ h2{
+   font-size:clamp(1.5rem,4vw,2rem);
+   border-bottom:3px solid #ffd24a;
+   display:inline-block;
+   padding-bottom:.2rem;
+   margin-top:2.5rem;
+   margin-bottom:1rem;
+ }
+ h3{
+   font-size:clamp(1.1rem,3vw,1.4rem);
+   color:#3a3a3a;
+   margin-top:1.5rem;
+   margin-bottom:.5rem;
+ }
+ p{ margin-bottom:1rem; }
+ ul,ol{ padding-left:1.5rem; margin-bottom:1rem; }
+ li{ margin-bottom:.45rem; }
+ code{
+   font-family:monospace;
+   background:#fff2c6;
+   padding:.1em .4em;
+   border-radius:4px;
+   font-size:.9em;
+ }
+ .section{ margin-bottom:2.5rem; }
+ .abbr-box{
+   background:#fff;
+   border:2px solid #ecdcc1;
+   border-radius:12px;
+   padding:1.5rem 2rem;
+   margin:2rem 0;
+   box-shadow:0 4px 14px rgba(0,0,0,.07);
+ }
+ .abbr-box .cols{
+   display:grid;
+   grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+   gap:.3rem 2rem;
+ }
+ .note{
+   background:linear-gradient(135deg,#eef4ff,#e5edff);
+   padding:1.3rem 1.5rem;
+   border-left:6px solid #254f9a;
+   border-radius:0 10px 10px 0;
+   margin:1.5rem 0;
+   font-size:.95rem;
+ }
+ .note h3{ margin-top:0; color:#254f9a; font-size:1.15rem; }
+ .warn{
+   background:#fffbe6;
+   padding:1rem 1.3rem;
+   border-left:5px solid #f0b400;
+   border-radius:0 8px 8px 0;
+   margin:1rem 0;
+   font-size:.9rem;
+ }
+ .hero{
+   display:block;
+   width:clamp(200px,40vw,300px);
+   height:clamp(200px,40vw,300px);
+   border-radius:50%;
+   object-fit:cover;
+   margin:0 auto 2.5rem;
+   box-shadow:0 10px 30px rgba(0,0,0,.18);
+   border:5px solid #fff;
+ }
+ .diagram{
+   margin:1.5rem 0;
+   width:100%;
+   border-radius:12px;
+   overflow:hidden;
+   box-shadow:0 5px 16px rgba(0,0,0,.12);
+   border:2px solid #f0ebe0;
+ }
+ .diagram img{
+   display:block;
+   width:100%;
+   height:auto;
+ }
+ figcaption{
+   text-align:center;
+   font-size:.8rem;
+   color:#666;
+   margin-top:.4rem;
+   font-style:italic;
+ }
+ .stitch-grid{
+   display:grid;
+   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+   gap:1.5rem;
+   margin:1.5rem 0;
+ }
+ .stitch-grid figure{
+   margin:0;
+   background:#fff;
+   border-radius:12px;
+   overflow:hidden;
+   box-shadow:0 5px 16px rgba(0,0,0,.1);
+   border:2px solid #f0ebe0;
+   padding-bottom:.8rem;
+ }
+ .stitch-grid figure img{
+   display:block;
+   width:100%;
+   height:auto;
+ }
+ .stitch-grid figcaption{
+   padding:.6rem 1rem 0;
+   font-size:.85rem;
+   text-align:left;
+   font-style:normal;
+ }
+ .stitch-grid figcaption strong{
+   display:block;
+   color:#254f9a;
+   font-size:1rem;
+ }
+ .cara-wrap{
+   display:flex;
+   justify-content:center;
+   margin:1.5rem 0;
+ }
+ .cara-wrap img{
+   max-width:min(350px,90%);
+   border-radius:12px;
+   box-shadow:0 5px 16px rgba(0,0,0,.12);
+   border:2px solid #f0ebe0;
+ }
+ .rnd{ margin-bottom:.35rem; }
+ .rnd strong{ color:#254f9a; }
+ footer{
+   font-size:.82rem;
+   color:#888;
+   text-align:center;
+   border-top:2px solid #e0d6c5;
+   padding-top:2rem;
+   margin-top:4rem;
+ }
+ @media(max-width:600px){
+   .wrap{ padding:1rem .8rem 3rem; }
+   .abbr-box .cols{ grid-template-columns:1fr 1fr; }
+   .stitch-grid{ grid-template-columns:1fr; }
+ }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>🧸 Coco Amigurumi</h1>
+<p class="subtitle">Manual Restaurado y Traducido — Para Sarah</p>
+<!-- IMAGEN 1: Portada en img/ -->
+<img class="hero" src="img/grover-portada.jpg" alt="Grover amigurumi terminado">
+
+<div class="section">
+<h2>Instrucciones de Bordado y Acabados</h2>
+<p><strong>COLORES – PUNTOS:</strong><br>
+WHITE (Blanco) – A – SINGLE (Punto recto corto)<br>
+BLACK (Negro) – B – SATIN (Punto plano/relleno)</p>
+<h3>Colocación de rasgos de la cara</h3>
+<ol>
+<li>Calcar el dibujo en papel fino (papel cebolla o de seda).</li>
+<li>Sujetar con alfileres sobre la cara para marcar la posición exacta.</li>
+<li>Bordar a punto plano (satin stitch) sobre el papel; luego rasgar y retirar el papel con cuidado.</li>
+</ol>
+<p class="warn">⚠️ Puede requerirse ajuste según cuánto relleno hayas puesto.</p>
+<p><strong>Detalle en los pies:</strong> Con lana BLANCA fina, coser 2 puntadas rectas de ½ pulgada (≈1.3 cm), separadas ¼ pulgada (0.6 cm) en la parte superior del pie.</p>
+<div class="stitch-grid">
+  <figure>
+    <!-- IMAGEN 2: Satin stitch en img/ -->
+    <img src="img/satin-stich.jpg" alt="Punto Plano – Satin Stitch">
+    <figcaption>
+      <strong>Punto Plano (Satin Stitch)</strong>
+      Puntadas muy juntas para cubrir una forma y dar efecto suave. Delinea primero los bordes y luego rellena toda la superficie.
+    </figcaption>
+  </figure>
+  <figure>
+    <!-- IMAGEN 3: Single stitch en img/ -->
+    <img src="img/single-stich.jpg" alt="Punto Recto – Single Stitch">
+    <figcaption>
+      <strong>Punto Recto (Single Stitch)</strong>
+      Puntada simple recta para cubrir líneas cortas. Se puede trabajar de forma regular o irregular.
+    </figcaption>
+  </figure>
+</div>
+</div>
+
+<div class="section">
+<h2>Diagrama de la Cara (1A)</h2>
+<p>Usa este esquema para calcar y colocar con precisión los ojos, la nariz y la boca.</p>
+<div class="cara-wrap">
+  <!-- IMAGEN 4: Diagrama cara en img/ -->
+  <img src="img/patron-cara-grover.jpg" alt="Diagrama 1A: posición de ojos, nariz y boca de Grover">
+</div>
+</div>
+
+<div class="section">
+<h2>Puntos Básicos de Crochet</h2>
+<h3>Nudo Corredizo y Cadeneta (ch)</h3>
+<p>A ≈1" del final de la lana, haz un nudo corredizo. Sujeta el ganchillo como un lápiz. Pasa la lana por los dedos de la mano izquierda: sobre el anular, bajo el corazón, sobre el índice. (Ver Diag. 1–3).</p>
+<h3>Punto Bajo (Single Crochet – sc)</h3>
+<p>Inserta el ganchillo bajo los 2 hilos superiores. Toma hebra y saca bucle (2 bucles en gancho). Toma hebra y pásala por los 2 bucles. (Ver Diag. 4–7).</p>
+<h3>Punto Alto (Double Crochet – dc)</h3>
+<p>Toma hebra (YO) e inserta ganchillo → 3 bucles. Toma hebra, pasa por 2 → 2 quedan. Toma hebra, pasa por los 2 restantes. (Ver Diag. 8–12).</p>
+<h3>Medio Punto Alto (Half-Double Crochet – hdc)</h3>
+<p>Como el punto alto hasta 3 bucles en gancho. Toma hebra y pásala por los <strong>tres</strong> bucles a la vez. (Ver Diag. 13–16).</p>
+<h3>Punto Raso / Deslizado (Slip Stitch – sl st)</h3>
+<p>Inserta ganchillo, toma hebra y pásala por el punto y el bucle del ganchillo en un solo movimiento. (Ver Diag. 17–18).</p>
+<h3>Aumentos y Disminuciones</h3>
+<ul>
+<li><strong>Aumento (inc):</strong> 2 sc en el mismo punto base. (Ver Diag. 19–20).</li>
+<li><strong>Disminución sc (dec):</strong> Insertar y sacar hebra dos veces consecutivas (3 bucles), pasar por todos. (Ver Diag. 21–22).</li>
+<li><strong>Disminución dc (dec):</strong> Igual hasta 3 bucles, pasar por todos. (Ver Diag. 23–25).</li>
+</ul>
+<div class="diagram">
+  <!-- IMAGEN 5: Puntos crochet en img/ -->
+  <img src="img/puntos-crochet.jpg" alt="Diagramas numerados de todos los puntos básicos de crochet">
+</div>
+</div>
+
+<div class="section abbr-box">
+<h2>Abreviaturas y Muestra (Gauge)</h2>
+<div class="cols">
+<ul>
+<li><code>ch</code> = cadeneta</li>
+<li><code>sc</code> = punto bajo</li>
+<li><code>dc</code> = punto alto</li>
+<li><code>hdc</code> = medio punto alto</li>
+<li><code>sl st</code> = punto raso</li>
+<li><code>st / sts</code> = punto(s)</li>
+</ul>
+<ul>
+<li><code>rnd</code> = vuelta / ronda</li>
+<li><code>beg</code> = comienzo</li>
+<li><code>inc</code> = aumento</li>
+<li><code>dec</code> = disminución</li>
+<li><code>rep</code> = repetir</li>
+<li><code>lp</code> = bucle</li>
+<li><code>yo</code> = hebra sobre gancho</li>
+<li><code>sk</code> = saltar punto</li>
+</ul>
+</div>
+<div class="note" style="margin-top:1.2rem;">
+<h3>⚠️ MUESTRA (GAUGE)</h3>
+<p>Si tienes <strong>demasiados</strong> puntos por pulgada → tejes muy apretado, usa aguja más grande.<br>
+Si tienes <strong>pocos</strong> puntos → tejes muy flojo, usa aguja más pequeña.<br>
+El kit incluye lana suficiente solo si se respeta la tensión correcta.</p>
+</div>
+</div>
+
+<div class="section">
+<h2>Cabeza (HEAD)</h2>
+<div class="note"><h3>🔵 Color: PURPLE — Trabajar en espiral. Marcar el inicio de cada vuelta.</h3></div>
+<p class="rnd"><strong>Rnd 1:</strong> 2 ch, 6 sc en la 2ª cad desde el ganchillo. <em>→ 6 puntos en círculo.</em> (6 sts)</p>
+<p class="rnd"><strong>Rnd 2:</strong> Aumento en cada punto. <em>→ 2 sc en cada uno de los 6 puntos.</em> (12 sts)</p>
+<p class="rnd"><strong>Rnd 3:</strong> *1 sc, 1 aum*; rep 3 veces. <em>→ Alternar 1 normal + 1 aumento.</em> (16 sts)</p>
+<p class="rnd"><strong>Rnd 4:</strong> *2 sc, 1 aum*; rep 3 veces. (20 sts)</p>
+<p class="rnd"><strong>Rnd 5:</strong> *3 sc, 1 aum*; rep 3 veces. (24 sts)</p>
+<p class="rnd"><strong>Rnd 6:</strong> *4 sc, 1 aum*; rep 3 veces. (28 sts)</p>
+<p class="rnd"><strong>Rnd 7:</strong> *5 sc, 1 aum*; rep 3 veces. (32 sts)</p>
+<p class="rnd"><strong>Rnd 8:</strong> *6 sc, 1 aum*; rep 3 veces. (36 sts)</p>
+<p class="rnd"><strong>Rnd 9:</strong> *7 sc, 1 aum*; rep 3 veces. (40 sts)</p>
+<p class="rnd"><strong>Rnds 10 & 11:</strong> Sc alrededor sin cambios. <em>→ 2 vueltas rectas para dar altura.</em> (40 sts)</p>
+<p class="rnd"><strong>Rnd 12:</strong> *8 sc, 1 dism*; rep 3 veces. <em>→ Empiezan las disminuciones.</em> (36 sts)</p>
+<p class="rnd"><strong>Rnd 13:</strong> *7 sc, 1 dism*; rep 3 veces. (32 sts)</p>
+<p class="rnd"><strong>Rnd 14:</strong> *6 sc, 1 dism*; rep 3 veces. (28 sts)</p>
+<p class="rnd"><strong>Rnd 15:</strong> *5 sc, 1 dism*; rep 3 veces. (24 sts)</p>
+<p class="rnd"><strong>Rnd 16:</strong> *4 sc, 1 dism*; rep 3 veces. (20 sts)</p>
+<p class="rnd"><strong>Rnd 17:</strong> *3 sc, 1 dism*; rep 3 veces. (16 sts)</p>
+<p class="rnd"><strong>Rnd 18:</strong> *2 sc, 1 dism*; rep 3 veces. <em>→ Rellena bien en este punto.</em> (12 sts)</p>
+<p class="rnd"><strong>Rnd 19:</strong> *1 sc, 1 dism*; rep 3 veces. <em>→ RELLENAR. Cerrar y rematar con hebra larga.</em> (8 sts)</p>
+</div>
+
+<div class="section">
+<h2>Forro de la Boca (MOUTH LINING)</h2>
+<div class="note"><h3>⚫ Color inicial: BLACK → cambia a RED</h3></div>
+<p class="rnd"><strong>Rnd 1:</strong> Con BLACK, 2 ch, 6 sc en la 2ª cad. (6 sts)</p>
+<p class="rnd"><strong>Rnd 2:</strong> Aumento en cada punto. (12 sts)</p>
+<p class="rnd"><strong>Rnd 3:</strong> *1 sc, 1 aum*; rep 5 veces. (18 sts)</p>
+<p class="rnd"><strong>Rnd 4:</strong> *2 sc, 1 aum*; rep 5 veces. (24 sts)</p>
+<p class="rnd"><strong>Rnd 5:</strong> *3 sc, 1 aum*; rep 5 veces. (30 sts)</p>
+<p class="rnd"><strong>Rnd 6:</strong> *4 sc, 1 aum*; rep 5 veces. (36 sts)</p>
+<p class="rnd"><strong>Rnd 7:</strong> *5 sc, 1 aum*; rep 5 veces. (42 sts)</p>
+<p class="rnd"><strong>Rnd 8:</strong> *6 sc, 1 aum*; rep 5 veces. En el último pto <strong>cambiar a RED</strong>. (48 sts)</p>
+<p><strong>Parte Roja (filas):</strong> 4 sc. 1 ch, girar. 1 sc en cada punto. Repetir hasta 12 filas.</p>
+<p><strong>Montaje:</strong> Dejar hebra roja larga y unir al borde del forro. Doblar a la mitad, coser con BLACK. Insertar en la abertura de la cabeza. Con PURPLE dar puntadas para formar los labios.</p>
+</div>
+
+<div class="section">
+<h2>Nariz (NOSE)</h2>
+<div class="note"><h3>🌸 Color: HOT PINK</h3></div>
+<p class="rnd"><strong>Rnd 1:</strong> 2 ch, 6 sc en la 2ª cad. (6 sts)</p>
+<p class="rnd"><strong>Rnd 2:</strong> *1 sc, 2 aum, 1 sc*. <em>→ Esto alarga la nariz para darle forma ovalada.</em> (7 sts)</p>
+<p class="rnd"><strong>Rnd 3:</strong> Sc alrededor sin cambios. (7 sts)</p>
+<p class="rnd"><strong>Rnd 4:</strong> *2 sc, 1 dism*, 3 sc. <em>→ Punto raso y rematar. RELLENAR antes de cerrar.</em> (6 sts)</p>
+</div>
+
+<div class="section">
+<h2>Ojos (EYES) — Hacer 2</h2>
+<div class="note"><h3>⚪ Color: WHITE — el revés es el derecho</h3></div>
+<p>Con WHITE, 3 ch. Sc en la 2ª cad. 2 sc en la siguiente cad. 1 sc en el lado opuesto. Unir con punto raso y rematar.</p>
+<p>Bordar la pupila con BLACK fina usando satin stitch sobre la apertura del ojo.</p>
+</div>
+
+<div class="section">
+<h2>Cuerpo (BODY)</h2>
+<div class="note"><h3>🔵 Color: PURPLE</h3></div>
+<p class="rnd"><strong>Rnd 1:</strong> 10 ch, unir formando un anillo. 1 ch, sc en cada punto. <em>→ Anillo de base, no círculo.</em> (10 sts)</p>
+<p class="rnd"><strong>Rnds 2 & 3:</strong> Sc alrededor sin cambios. (10 sts)</p>
+<p class="rnd"><strong>Rnd 4:</strong> *1 sc, 1 aum*; rep una vez más. (12 sts)</p>
+<p class="rnd"><strong>Rnd 5:</strong> *2 sc, 1 aum*; rep una vez más. (14 sts)</p>
+<p class="rnd"><strong>Rnd 6:</strong> *3 sc, 1 aum*; rep una vez más. (16 sts)</p>
+<p class="rnd"><strong>Rnd 7:</strong> *4 sc, 1 aum*; rep una vez más. (18 sts)</p>
+<p class="rnd"><strong>Rnd 8:</strong> Sc alrededor sin cambios. (18 sts)</p>
+<p class="rnd"><strong>Rnd 9:</strong> *1 sc, 1 aum*; rep dos veces más. (21 sts)</p>
+<p class="rnd"><strong>Rnd 10:</strong> Sc alrededor sin cambios. (21 sts)</p>
+<p class="rnd"><strong>Rnd 11:</strong> *3 sc, 1 aum*; rep dos veces más. (24 sts)</p>
+<p class="rnd"><strong>Rnd 12:</strong> Sc alrededor sin cambios. (24 sts)</p>
+<p class="rnd"><strong>Rnd 13:</strong> *5 sc, 1 aum*; rep 3 veces. (28 sts)</p>
+<p class="rnd"><strong>Rnd 14:</strong> *6 sc, 1 aum*; rep 3 veces. (32 sts)</p>
+<p class="rnd"><strong>Rnd 15:</strong> Sc alrededor sin cambios. (32 sts)</p>
+<p class="rnd"><strong>Rnd 16:</strong> *7 sc, 1 aum*; rep 3 veces. <em>→ Punto más ancho del cuerpo.</em> (36 sts)</p>
+<p class="rnd"><strong>Rnd 17:</strong> Sc alrededor sin cambios. (36 sts)</p>
+<p class="rnd"><strong>Rnd 18:</strong> *5 sc, 1 dism*; rep 3 veces. <em>→ El cuerpo se estrecha.</em> (30 sts)</p>
+<p class="rnd"><strong>Rnd 19:</strong> *4 sc, 1 dism*; rep una vez más. (≈24–26 sts)</p>
+<p class="rnd"><strong>Rnd 20:</strong> *10 sc, 1 dism*; rep una vez. <em>→ RELLENAR (STUFF) aquí.</em> (22 sts)</p>
+<p class="rnd"><strong>Rnd 21:</strong> *3 sc, 1 dism*; rep 3 veces, 2 sc. (18 sts)</p>
+<p class="rnd"><strong>Rnd 22:</strong> Punto raso en el 1er sc. 5 ch, saltar 8 puntos, punto raso en el siguiente sc. 1 ch, girar. <em>→ ¡Se forman los huecos para las piernas!</em></p>
+</div>
+
+<div class="section">
+<h2>Piernas (LEGS)</h2>
+<div class="note"><h3>🔵 Color: PURPLE — tejer en los huecos del cuerpo</h3></div>
+<p class="rnd"><strong>Rnd 1:</strong> Sc alrededor del hueco. <em>→ 13 puntos en cada hueco de pierna.</em> (13 sts)</p>
+<p class="rnd"><strong>Rnds 2–5:</strong> 1 disminución por vuelta en sitios distintos. <em>→ Bajar de 13 a 9 pts progresivamente.</em> (9 sts)</p>
+<p class="rnd"><strong>Rnds 6–11:</strong> Sc alrededor sin cambios. <em>→ Vueltas rectas del muslo.</em> (9 sts)</p>
+<p class="rnd"><strong>Rnd 12:</strong> Sc + 2 aumentos en el centro frontal. <em>→ Empieza el pie.</em> (11 sts)</p>
+<p class="rnd"><strong>Rnds 13 & 14:</strong> Repetir Rnd 12 (llegar a 13 y 15 sts).</p>
+<p class="rnd"><strong>Rnd 15:</strong> Sc + 4 aumentos en el centro del pie. (19 sts)</p>
+<p class="rnd"><strong>Rnds 16–18:</strong> Continuar la misma lógica de Rnd 12 (21, 23, 25 sts).</p>
+<p class="rnd"><strong>Rnd 19:</strong> Solo bucles traseros (BLO): *1 sc BLO, 1 dism BLO*; rep 5 veces más. <em>→ Da un pliegue limpio en el pie.</em> (17 sts)</p>
+<p><strong>RELLENAR (STUFF).</strong></p>
+<p class="rnd"><strong>Rnd 20:</strong> *1 sc, 1 dism*; rep 4 veces, 2 sc. Unir y dejar hebra. <em>→ Repetir Rnds 1–20 para la 2ª pierna. Cerrar y coser.</em> (12 sts)</p>
+</div>
+
+<div class="section">
+<h2>Brazos (ARMS) — Hacer 2</h2>
+<div class="note"><h3>🔵 Color: PURPLE</h3></div>
+<p class="rnd"><strong>Rnd 1:</strong> 7 ch, unir en anillo, sc alrededor. <em>→ Anillo alargado base del brazo.</em> (7 sts)</p>
+<p class="rnd"><strong>Rnds 2–13:</strong> Sc alrededor sin cambios. <em>→ 12 vueltas rectas. Rellenar a medida que avanzas.</em> (7 sts)</p>
+<p class="rnd"><strong>Rnd 14:</strong> *1 sc, 1 aum*, 3 sc. <em>→ La mano empieza a ensancharse.</em> (8 sts)</p>
+<p class="rnd"><strong>Rnd 15:</strong> *1 sc, 1 aum*; rep 3 veces. (12 sts)</p>
+<p class="rnd"><strong>Rnd 16:</strong> Sc alrededor. <em>→ RELLENAR ligeramente la mano.</em> (12 sts)</p>
+<p class="rnd"><strong>Rnd 17:</strong> Aplanar la pieza y hacer sc a través de ambas capas. <em>→ La mano queda plana con 6 pts en el borde.</em> (6 sts)</p>
+<div class="note">
+<h3>🎯 Rnd 18 — Los 4 Dedos (explicación detallada)</h3>
+<p>No tejes alrededor sino que construyes 4 dedos desde el borde plano cerrado (los 6 pts de Rnd 17):</p>
+<ol>
+<li><strong>Dedo 1 (más largo):</strong> 5 ch → hdc en la 3ª cad desde ganchillo → 1 sc en cada cad restante → sl st en el lateral de la mano para anclar.</li>
+<li><strong>Dedos 2, 3 y 4:</strong> 3 ch → 1 sc en los 2 siguientes puntos de cadeneta → sl st en el siguiente punto del borde de la mano. Repetir 3 veces.</li>
+<li><strong>Rematar:</strong> sl st final en el lateral y esconder la hebra.</li>
+</ol>
+<p class="warn">💡 Distribuye los 4 dedos uniformemente en los 6 puntos del borde. El dedo 1 (ch5) va en el centro; los demás (ch3) a los lados.</p>
+</div>
+</div>
+
+<div class="section">
+<h2>Montaje Final (FINISHING)</h2>
+<ol>
+<li>Aplanar el cuello del cuerpo y coser la cabeza encima con hebra larga.</li>
+<li>El cuello debe quedar <strong>justo detrás de la parte inferior de la abertura de la boca</strong>.</li>
+<li>Coser los brazos a cada lado del cuerpo en la <strong>vuelta 4 del cuerpo</strong>.</li>
+<li>Verificar que las piernas estén bien unidas desde el cuerpo.</li>
+<li>Coser la nariz centrada en la cara siguiendo el diagrama 1A.</li>
+<li>Coser los ojos a cada lado de la nariz siguiendo el diagrama 1A.</li>
+<li>Rematar y esconder todas las hebras sobrantes.</li>
+</ol>
+</div>
+
+<footer>
+Patrón original: Grove Crochet  — Hecho por Wil<br>
+Manual restaurado y traducido al español para Sarah · Febrero 2026
+</footer>
+
+</div>
+</body>
+</html>
